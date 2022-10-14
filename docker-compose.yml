@@ -1,5 +1,5 @@
 version: '3.1'
-name: database-lab
+name: databases
 services:
   postgres:
     container_name: postgres
@@ -25,7 +25,7 @@ services:
     image: mariadb:10.6
     environment:
       - MARIADB_ROOT_PASSWORD=sMvM0yFdxkQLKAk3VcVokPDBkpzJPWbN
-      - MARIADB_DATABASE=mariadb-default
+      - MARIADB_DATABASE=defaultdb
       - MARIADB_USER=mariadb
       - MARIADB_PASSWORD=sraqYvgA7112ZDwUTiXcunvkaRvwjcLa
     volumes:
