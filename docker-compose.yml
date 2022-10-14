@@ -1,5 +1,5 @@
 version: '3.1'
-name: databases
+name: db-services
 services:
   postgres:
     container_name: postgres
