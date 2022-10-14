@@ -13,7 +13,7 @@ services:
     volumes:
       - ./pg_data/:/var/lib/postgresql/data/:rw
       - ./utils/:/utils/:rw
-      - ./backup/:/backup/:rw
+      - ./backup/backup-postgres/:/backup/:rw
     ports:
       - 5432:5432
     networks:
@@ -30,6 +30,7 @@ services:
       - MARIADB_PASSWORD=sraqYvgA7112ZDwUTiXcunvkaRvwjcLa
     volumes:
       - ./my_data:/var/lib/mysql/:rw
+      - ./backup/backup-mariadb/:/backup/:rw
     ports:
       - 3306:3306
     networks:
