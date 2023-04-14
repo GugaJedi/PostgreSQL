@@ -5,9 +5,9 @@ name: db-services
 services:
   postgres:
     container_name: postgres
-    image: gugajedi/postgres-14.5-alpine:latest
     hostname: postgres
     restart: unless-stopped
+    image: postgres:latest
     environment:
       POSTGRES_PASSWORD: sMvM0yFdxkQLKAk3VcVokPDBkpzJPWbN
       POSTGRES_INITDB_ARGS: '--encoding=LATIN1 --locale=C /var/lib/postgresql/data'
@@ -32,7 +32,7 @@ services:
     container_name: mariadb
     hostname: mariadb
     restart: unless-stopped
-    image: mariadb:10.7.8
+    image: mariadb:latest
     environment:
       - MARIADB_ROOT_PASSWORD=sMvM0yFdxkQLKAk3VcVokPDBkpzJPWbN
       - MARIADB_DATABASE=defaultdb
